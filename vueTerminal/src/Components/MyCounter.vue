@@ -1,21 +1,26 @@
 <template>
-    <h1>Hola mundo</h1>
-    <h3>contador: {{ contador }}</h3>
-    <h3>Cuadrado: {{ contador*contador }}</h3>
+  <div class="counter-container">
+    <h2 class="counter-title">Contador 1</h2>
+    <h3 class="counter-display">Valor: {{ count }}</h3>
+    <h3 class="counter-square">Cuadrado: {{ square }}</h3>
 
-    <div>
-        <button @click="contador++">+1</button>
-        <button @click="contador--">-1</button>
+    <div class="button-container">
+      <button @click="incrementar" class="counter-button">+1</button>
+      <button @click="decrementar" class="counter-button">-1</button>
     </div>
+  </div>
+
 </template>
 
 <script lang="ts" setup>
-    import{ref} from 'vue';
+    import{useSumRes} from '../useSumRes';
+    import '../../style.css'
 
     const props = defineProps<{
         value: number;
     }>();
     
-    const contador = ref(props.value);
+    const { count, incrementar, decrementar, square } = useSumRes(props.value);
     
 </script>
+

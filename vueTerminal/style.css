@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Estilos personalizados */
+.counters-grid {
+    @apply grid grid-cols-2 md:grid-cols-3 gap-4;
+  }
+  
+  .counter-container {
+    @apply p-6 bg-white rounded-lg shadow-lg text-center;
+  }
+  
+  .counter-title {
+    @apply text-2xl font-semibold mb-2;
+  }
+  
+  .counter-display,
+  .counter-square {
+    @apply text-lg text-gray-700;
+  }
+  
+  .button-container {
+    @apply flex justify-center space-x-4 mt-4;
+  }
+  
+  .counter-button {
+    @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
+  }
+  

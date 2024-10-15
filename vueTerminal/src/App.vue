@@ -1,12 +1,15 @@
 <template>
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-    <hr/>
-    <MyCounter :value="5"/>
-    <MyCounter2 :value="10"/>
-    <MyCounter3 :value="20"/>
-</template>
+    <div class="min-h-screen bg-gray-100">
+      <h1 class="text-4xl font-bold text-center py-8 text-gray-800">
+        Contadores
+      </h1>
+      <div class="counters-grid">
+        <MyCounter :value="5"/>
+        <MyCounter2 :value="10"/>
+        <MyCounter3 :value="20"/>
+      </div>
+    </div>
+  </template>
 
 <script lang="ts" setup>
     import MyCounter from './Components/MyCounter.vue';
@@ -14,10 +17,3 @@
     import MyCounter3 from './Components/MyCounter3.vue';
     
 </script>
-
-<style scoped>
-h1{
-    
-    color: blue;
-}
-</style>
