@@ -1,6 +1,6 @@
 <template>
   <div class="counter-container">
-    <h2 class="counter-title">Contador 3</h2>
+    <h2 class="counter-title">Mycounter 3</h2>
     <h3 class="counter-display">Valor: {{ count }}</h3>
     <h3 class="counter-square">Cuadrado: {{ square }}</h3>
 
